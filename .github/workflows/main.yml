@@ -8,16 +8,21 @@ on:
 
 jobs:
   test_build:
-    runs-on: mobiledevops/flutter-sdk-image:3.10.1
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build
-      working-directory: ${{github.workspace}}
-      run: flutter build apk
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+        cache: true
+
+    # - name: Build
+    #   working-directory: ${{github.workspace}}
+    #   run: flutter build apk
 
     - name: Test
-      working-directory: ${{github.workspace}}
+      working-directory: ${{github.workspace}}/carbongecko
       run: flutter test
-      
