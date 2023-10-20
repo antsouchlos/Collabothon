@@ -1,0 +1,23 @@
+name: Flutter Build & Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test_build:
+    runs-on: mobiledevops/flutter-sdk-image:3.10.1
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      working-directory: ${{github.workspace}}
+      run: flutter build apk
+
+    - name: Test
+      working-directory: ${{github.workspace}}
+      run: flutter test
+      
