@@ -65,7 +65,7 @@ class WelcomeView extends StatelessWidget {
                 child: Container(
                   constraints: BoxConstraints(maxWidth: 350, maxHeight: 350),
                   child: Image.asset(
-                    'assets/introduction_animation/welcome.png',
+                    'assets/geckoLogo.png',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -74,17 +74,19 @@ class WelcomeView extends StatelessWidget {
                 position: _welcomeFirstHalfAnimation,
                 child: Text(
                   "Welcome",
-                  style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(
-                padding:
-                    EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
+                padding: EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                 child: Text(
-                  "Stay organised and live stress-free with you-do app",
+                  "We require an account to set you up.\nDon't worry, your information is\nsecure with us.",
                   textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 17,
+                  ),
                 ),
-              ),
+              )
             ],
           ),
         ),

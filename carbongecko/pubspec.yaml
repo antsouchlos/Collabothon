@@ -75,6 +75,12 @@ flutter:
     - assets/dashboard/2.png
     - assets/dashboard/22.png
     - assets/dashboard/back_alt.png
+    - assets/introduction_animation/Picture1.png
+    - assets/introduction_animation/Picture2.png
+    - assets/introduction_animation/Cloud1.png
+    - assets/introduction_animation/Cloud2.jpg
+    - assets/introduction_animation/Cloud3.png
+    - assets/dashboard/Credits.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
