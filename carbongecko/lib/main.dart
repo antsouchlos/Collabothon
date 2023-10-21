@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:carbongecko/introduction_animation/introduction_animation_screen.dart';
+import 'package:carbongecko/dashboard/dashboard_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: geckoGreen,
       ),
       home: const IntroductionAnimationScreen(),
+      // home: FitnessAppHomeScreen(),
     );
   }
 }
@@ -148,3 +150,15 @@ class MyApp extends StatelessWidget {
 //     });
 //   }
 // }
+
+class HexColor extends Color {
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
+  }
+}

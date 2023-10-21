@@ -1,3 +1,4 @@
+import 'package:carbongecko/dashboard/dashboard_home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,13 +17,14 @@ class LoginScreen extends StatelessWidget {
         primarySwatch: Colors.green,
         scaffoldBackgroundColor: geckoGreen,
       ),
-       home: Scaffold(
+      home: Scaffold(
         body: SafeArea(
           child: Column(
             children: <Widget>[
               // Using Expanded to let this part take the top 2/3rds of the screen.
               Expanded(
-                flex: 2, // occupies 2/3rds of the space because total (2 + 1) = 3 and 2/3 are two parts
+                flex: 2,
+                // occupies 2/3rds of the space because total (2 + 1) = 3 and 2/3 are two parts
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -48,10 +50,11 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               // Spacer will occupy the remaining space, pushing the fields and button to the end of the column.
-              Spacer(),
+              const Spacer(),
               // Email input field.
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+              const Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                 child: TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
@@ -62,10 +65,12 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               // Password input field.
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+              const Padding(
+                padding:
+                    EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                 child: TextField(
-                  obscureText: true,  // This will obscure text input for passwords.
+                  obscureText: true,
+                  // This will obscure text input for passwords.
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
@@ -75,29 +80,32 @@ class LoginScreen extends StatelessWidget {
               ),
               // Button at the bottom
               Builder(
-                builder: (BuildContext context) { // This context is aware of the Navigator
+                builder: (BuildContext context) {
+                  // This context is aware of the Navigator
                   return Container(
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     width: double.infinity, // makes the container full width
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const SecondScreen()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FitnessAppHomeScreen()),
+                        );
                       },
-                      child: const Text(
-                        'Start',
-                        style: TextStyle(fontSize: 20),
-                      ),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
                         onPrimary: geckoGreen,
                         padding: const EdgeInsets.all(20),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0), // making corners completely square
+                          borderRadius: BorderRadius.circular(
+                              0), // making corners completely square
                         ),
                         minimumSize: Size(double.infinity, 50),
+                      ),
+                      child: const Text(
+                        'Start',
+                        style: TextStyle(fontSize: 20),
                       ),
                     ),
                   );
