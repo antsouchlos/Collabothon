@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Define the gecko green color
-    const Color geckoGreen = Color(0xFF6CBB3C);
+    const Color geckoGreen = Color(0xFF78E482);
 
     return MaterialApp(
       title: 'Carbon Gecko',
@@ -18,13 +18,13 @@ class LoginScreen extends StatelessWidget {
         scaffoldBackgroundColor: geckoGreen,
       ),
       home: Scaffold(
+        // Resizing the content to avoid bottom inset on Scaffold
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Column(
             children: <Widget>[
               // Using Expanded to let this part take the top 2/3rds of the screen.
               Expanded(
-                flex: 2,
-                // occupies 2/3rds of the space because total (2 + 1) = 3 and 2/3 are two parts
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -39,8 +39,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      'Carbon Gecko',
-                      style: GoogleFonts.acme(
+                      'Carbon\n    Gecko',
+                      style: GoogleFonts.rowdies(
                         fontSize: 30,
                         color: Colors.black,
                       ),
@@ -49,67 +49,67 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // Spacer will occupy the remaining space, pushing the fields and button to the end of the column.
-              const Spacer(),
+              SizedBox(height: 20), // Added padding here
               // Email input field.
-              const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                 child: TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black), // Outline color
+                    ),
                     labelText: 'Email Address',
+                    labelStyle: TextStyle(color: Colors.black), // Label text color
                     hintText: 'Enter your email',
+                    hintStyle: TextStyle(color: Colors.black.withOpacity(0.5)), // Hint text color
                   ),
                 ),
               ),
-              // Password input field.
-              const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+
+// Password input field.
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                 child: TextField(
                   obscureText: true,
-                  // This will obscure text input for passwords.
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black), // Outline color
+                    ),
                     labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.black), // Label text color
                     hintText: 'Enter your password',
+                    hintStyle: TextStyle(color: Colors.black.withOpacity(0.5)), // Hint text color
                   ),
                 ),
               ),
+              SizedBox(height: 100), // Added padding here
               // Button at the bottom
-              Builder(
-                builder: (BuildContext context) {
-                  // This context is aware of the Navigator
-                  return Container(
-                    padding: const EdgeInsets.symmetric(vertical: 20.0),
-                    width: double.infinity, // makes the container full width
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => FitnessAppHomeScreen()),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: geckoGreen,
-                        padding: const EdgeInsets.all(20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              0), // making corners completely square
-                        ),
-                        minimumSize: Size(double.infinity, 50),
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                width: double.infinity, // makes the container full width
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FitnessAppHomeScreen(),
                       ),
-                      child: const Text(
-                        'Start',
-                        style: TextStyle(fontSize: 20),
-                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.black,
+                    onPrimary: Colors.white,
+                    padding: const EdgeInsets.all(20),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30), // rounded edges
                     ),
-                  );
-                },
+                  ),
+                  child: const Text(
+                    'Create account',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
               ),
             ],
           ),

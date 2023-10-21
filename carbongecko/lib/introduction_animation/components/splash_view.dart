@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashView extends StatefulWidget {
   final AnimationController animationController;
@@ -28,26 +29,44 @@ class _SplashViewState extends State<SplashView> {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+              padding: EdgeInsets.only(top: 150.0, bottom: 0.0),
+            ),
             SizedBox(
-              width: MediaQuery.of(context).size.width,
+              width: 250, // Set the desired width
+              height: 200, // Set the desired height
               child: Image.asset(
-                'assets/introduction_animation/introduction_image.png',
-                fit: BoxFit.cover,
+                'assets/geckoLogo.png',
+                fit: BoxFit.contain, // You can also use other BoxFit options to control how the image fits within the specified dimensions.
               ),
             ),
             Padding(
               padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
-                "Clearhead",
-                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                'Carbon\n    Gecko',
+                style: GoogleFonts.rowdies(
+                  fontSize: 35,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 64, right: 64),
+              padding: EdgeInsets.only(top: 70.0, bottom: 0.0),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 45, right: 45),
               child: Text(
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                'Climb Walls, Not Emissions: The Gecko Way!',
+                style: GoogleFonts.raleway(
+                  fontSize: 25,
+                  color: Colors.black,
+                ),
                 textAlign: TextAlign.center,
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 150.0, bottom: 0.0),
             ),
             SizedBox(
               height: 48,
@@ -69,7 +88,7 @@ class _SplashViewState extends State<SplashView> {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(38.0),
-                    color: Color(0xff132137),
+                    color: Colors.black,
                   ),
                   child: Text(
                     "Let's begin",
