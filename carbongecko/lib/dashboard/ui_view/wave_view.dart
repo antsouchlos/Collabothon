@@ -147,7 +147,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                     Padding(
                       padding: const EdgeInsets.only(top: 3.0),
                       child: Text(
-                        'kg\nCO2',
+                        'g\nCO2',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: FitnessAppTheme.fontName,

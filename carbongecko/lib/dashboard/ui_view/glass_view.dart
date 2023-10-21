@@ -50,7 +50,7 @@ class GlassView extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                     left: 90, bottom: 12, right: 16, top: 12),
                                 child: Text(
-                                  'Make the world a better place by using less social media',
+                                  'Social media consumption leads to 92 kg of CO2 emissions /person/year. This is equivalent to driving a car for 820km.',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontFamily: FitnessAppTheme.fontName,

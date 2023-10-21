@@ -60,7 +60,7 @@ class WorkoutView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: const Text(
-                          'Welcome back,\nJohannes Tsouchlos',
+                          'Welcome back,\nMax Mustermann',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontFamily: FitnessAppTheme.fontName,

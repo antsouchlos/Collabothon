@@ -91,7 +91,7 @@ class MoodDiaryVew extends StatelessWidget {
                     padding: EdgeInsets.only(
                         left: 64, right: 64, top: 16, bottom: 16),
                     child: Text(
-                      "By using low emission Google Cloud servers, the carbon emissions of Carbon Gecko can be minimized",
+                      "By using low emission Google Cloud servers, the carbon emissions of this app are minimized.",
                       textAlign: TextAlign.center,
                       style:
                       TextStyle(fontSize: 20.0),

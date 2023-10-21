@@ -80,7 +80,7 @@ class WelcomeView extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                 child: Text(
-                  "We require an account to set you up.\nDon't worry, your information is\nsecure with us.",
+                  "To use Carbon Gecko\nan account is needed.\n\nDon't worry, your information is\nsecure with us.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,

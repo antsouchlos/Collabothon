@@ -138,7 +138,7 @@ class CenterNextButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Already have an account? ',
+                    'Already have an account?',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,

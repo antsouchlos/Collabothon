@@ -100,7 +100,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                   padding: const EdgeInsets.only(
                                       left: 4, top: 2, bottom: 14),
                                   child: Text(
-                                    'Consumed 20 kg CO2 this week',
+                                    'Consumed 60g CO2 this week',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: FitnessAppTheme.fontName,
@@ -149,7 +149,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                         padding:
                                             const EdgeInsets.only(left: 4.0),
                                         child: Text(
-                                          'Last week: 56 minutes',
+                                          'Used for 56 minutes this week',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontFamily:
@@ -180,7 +180,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                         ),
                                         Flexible(
                                           child: Text(
-                                            'Used more than last week!.',
+                                            'Used 10% more than last week!',
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                               fontFamily:

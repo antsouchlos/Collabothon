@@ -57,7 +57,7 @@ class _SplashViewState extends State<SplashView> {
             Padding(
               padding: EdgeInsets.only(left: 45, right: 45),
               child: Text(
-                'Climb Walls, Not Emissions: The Gecko Way!',
+                'Climb Walls, Not Emissions.\nThe Gecko Way!',
                 style: GoogleFonts.raleway(
                   fontSize: 25,
                   color: Colors.black,

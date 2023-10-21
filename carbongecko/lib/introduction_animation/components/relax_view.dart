@@ -86,7 +86,7 @@ class RelaxView extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 30),
                   child: Text(
-                    "By improving your digital well-being and reducing your digital carbon footprint!",
+                    "Less social media is not only good for you, but also for the environment!",
                     textAlign: TextAlign.center,
                     style:
                     TextStyle(fontSize: 20.0),

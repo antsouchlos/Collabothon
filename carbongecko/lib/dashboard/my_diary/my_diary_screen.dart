@@ -1,4 +1,3 @@
-import 'package:carbongecko/dashboard/ui_view/body_measurement.dart';
 import 'package:carbongecko/dashboard/ui_view/glass_view.dart';
 import 'package:carbongecko/dashboard/ui_view/mediterranean_diet_view.dart';
 import 'package:carbongecko/dashboard/ui_view/title_view.dart';
