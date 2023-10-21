@@ -50,7 +50,7 @@ class GlassView extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                     left: 90, bottom: 12, right: 16, top: 12),
                                 child: Text(
-                                  'Make the world a better place with one hour less on social media',
+                                  'Make the world a better place by using less social media',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontFamily: FitnessAppTheme.fontName,

@@ -47,72 +47,55 @@ class _BottomBarViewState extends State<BottomBarView>
                 color: FitnessAppTheme.darkText,
                 elevation: 16.0,
                 clipper: TabClipper(
-                    radius: Tween<double>(begin: 0.0, end: 1.0)
-                            .animate(CurvedAnimation(
-                                parent: animationController!,
-                                curve: Curves.fastOutSlowIn))
-                            .value *
-                        38.0),
+                  radius: Tween<double>(begin: 0.0, end: 1.0)
+                      .animate(CurvedAnimation(
+                      parent: animationController!,
+                      curve: Curves.fastOutSlowIn))
+                      .value *
+                      38.0,
+                ),
                 child: Column(
                   children: <Widget>[
                     SizedBox(
                       height: 62,
-                      child: Padding(
-                        padding:
-                            const EdgeInsets.only(left: 8, right: 8, top: 4),
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[0],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[0]);
-                                    widget.changeIndex!(0);
-                                  }),
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1, // 25% of screen width
+                            child: TabIcons(
+                              tabIconData: widget.tabIconsList?[0],
+                              removeAllSelect: () {
+                                setRemoveAllSelection(
+                                    widget.tabIconsList?[0]);
+                                widget.changeIndex!(0);
+                              },
                             ),
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[1],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[1]);
-                                    widget.changeIndex!(1);
-                                  }),
+                          ),
+                          SizedBox(
+                            width: Tween<double>(begin: 0.0, end: 1.0)
+                                .animate(CurvedAnimation(
+                                parent: animationController!,
+                                curve: Curves.fastOutSlowIn))
+                                .value *
+                                64.0,
+                          ),
+                          Expanded(
+                            flex: 1, // 75% of screen width
+                            child: TabIcons(
+                              tabIconData: widget.tabIconsList?[1],
+                              removeAllSelect: () {
+                                setRemoveAllSelection(
+                                    widget.tabIconsList?[1]);
+                                widget.changeIndex!(1);
+                              },
                             ),
-                            SizedBox(
-                              width: Tween<double>(begin: 0.0, end: 1.0)
-                                      .animate(CurvedAnimation(
-                                          parent: animationController!,
-                                          curve: Curves.fastOutSlowIn))
-                                      .value *
-                                  64.0,
-                            ),
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[2],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[2]);
-                                    widget.changeIndex!(2);
-                                  }),
-                            ),
-                            Expanded(
-                              child: TabIcons(
-                                  tabIconData: widget.tabIconsList?[3],
-                                  removeAllSelect: () {
-                                    setRemoveAllSelection(
-                                        widget.tabIconsList?[3]);
-                                    widget.changeIndex!(3);
-                                  }),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).padding.bottom,
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -121,7 +104,7 @@ class _BottomBarViewState extends State<BottomBarView>
         ),
         Padding(
           padding:
-              EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+          EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
           child: SizedBox(
             width: 38 * 2.0,
             height: 38 + 62.0,
@@ -136,27 +119,22 @@ class _BottomBarViewState extends State<BottomBarView>
                   child: ScaleTransition(
                     alignment: Alignment.center,
                     scale: Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: animationController!,
-                            curve: Curves.fastOutSlowIn)),
+                      CurvedAnimation(
+                        parent: animationController!,
+                        curve: Curves.fastOutSlowIn,
+                      ),
+                    ),
                     child: Container(
-                      // alignment: Alignment.center,s
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
-                        gradient: LinearGradient(
-                            colors: [
-                              FitnessAppTheme.nearlyDarkBlue,
-                              HexColor('#6A88E5'),
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight),
+                        color: Colors.white,
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                              color: FitnessAppTheme.nearlyDarkBlue
-                                  .withOpacity(0.4),
-                              offset: const Offset(8.0, 16.0),
-                              blurRadius: 16.0),
+                            color: FitnessAppTheme.nearlyDarkBlue
+                                .withOpacity(0.4),
+                            offset: const Offset(8.0, 16.0),
+                            blurRadius: 16.0,
+                          ),
                         ],
                       ),
                       child: Material(
@@ -167,8 +145,8 @@ class _BottomBarViewState extends State<BottomBarView>
                           focusColor: Colors.transparent,
                           onTap: widget.addClick,
                           child: Icon(
-                            Icons.add,
-                            color: FitnessAppTheme.white,
+                            Icons.refresh,
+                            color: Colors.black,
                             size: 32,
                           ),
                         ),
@@ -272,7 +250,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 8,
                       height: 8,
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: Color(0xFF78E482),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -293,7 +271,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 4,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: Color(0xFF78E482),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -314,7 +292,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 6,
                       height: 6,
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: Color(0xFF78E482),
                         shape: BoxShape.circle,
                       ),
                     ),

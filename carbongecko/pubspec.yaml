@@ -70,6 +70,10 @@ flutter:
     - assets/geckoLogo_white.png
     - assets/introduction_animation/
     - assets/dashboard/
+    - assets/dashboard/1.png
+    - assets/dashboard/11.png
+    - assets/dashboard/2.png
+    - assets/dashboard/22.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
