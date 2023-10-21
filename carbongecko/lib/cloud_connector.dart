@@ -5,64 +5,46 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:carbongecko/constants.dart';
 import 'package:carbongecko/user_model.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+const List<String> scopes = <String>[
+  'https://www.googleapis.com/auth/devstorage.full_control',
+];
+
+GoogleSignIn _googleSignIn = GoogleSignIn(
+  serverClientId:
+      '954992030271-edi913pj83725087q38n1d2s89mn0rvk.apps.googleusercontent.com',
+  scopes: scopes,
+);
 
 class CloudConnector {
-  Future<String> obtainToken() async {
+  GoogleSignInAccount? _account;
+
+  Future<void> handleSignIn() async {
+    // try {
+    _account = await _googleSignIn.signIn();
+
+    createObject(_account);
+    // } catch (error) {
+    //   print(error);
+    // }
+  }
+
+  void createObject(account) async {
     try {
-      final params = {
-        "client_id":
-            "954992030271-kqbdutaos1tssptjvv3d3port7arlvpe.apps.googleusercontent.com ",
-        "redirect_uri": "",
-        "response_type": "",
-        "scope": "https://www.googleapis.com/auth/devstorage.full_control",
-        // "access_type": "",
-        // "state": "",
-        // "include_granted_scopes": "",
-        // "enable_granular_consent": "",
-        // "login_hint": "",
-        // "prompt": "",
-      };
-      var url = Uri.https(Constants.authBaseUrl, Constants.authPath, params);
+      final params = {'name': 'test_object'};
+      var url = Uri.https(
+          Constants.storageBaseUrl, Constants.storageBucketPath, params);
 
-      var headers = {HttpHeaders.contentTypeHeader: "application/json"};
+      var response = await http.post(url,
+          headers: await account.authHeaders,
+          body: jsonEncode(<String, String>{
+            'some key': "some value",
+          }));
 
-      var response = await http.get(
-        url,
-        headers: headers,
-        // body: jsonEncode(<String, String>{
-        //   'asfd': "asdfasdf",
-        // })
-      );
-
-      var data = jsonDecode(response.body);
-      print(data);
+      log(jsonDecode(response.body));
     } catch (e) {
       log(e.toString());
     }
-
-    return "";
   }
-
-// void createObject() async {
-//   try {
-//     final params = {'name': 'test_object'};
-//     var url = Uri.https(Constants.storageBaseUrl, Constants.storageBucketPath, params);
-//
-//     var headers = {
-//       HttpHeaders.authorizationHeader: "Bearer ${Constants.oauth2Token}",
-//       HttpHeaders.contentTypeHeader: "application/json"
-//     };
-//
-//     var response = await http.post(url,
-//         headers: headers,
-//         body: jsonEncode(<String, String>{
-//           'asfd': "asdfasdf",
-//         }));
-//
-//     var data = jsonDecode(response.body);
-//     print(data);
-//   } catch (e) {
-//     log(e.toString());
-//   }
-// }
 }
