@@ -2,23 +2,33 @@ import 'package:flutter/material.dart';
 
 class FitnessAppTheme {
   FitnessAppTheme._();
-  static const Color nearlyWhite = Color(0xFFFAFAFA);
-  static const Color white = Color(0xFFFFFFFF);
-  static const Color background = Color(0xFFF2F3F8);
-  static const Color nearlyDarkBlue = Color(0xFF2633C5);
+  // This is your new base color
+  static const Color baseColor = Color(0xFF78E482);
 
-  static const Color nearlyBlue = Color(0xFF00B6F0);
-  static const Color nearlyBlack = Color(0xFF213333);
-  static const Color grey = Color(0xFF3A5160);
-  static const Color dark_grey = Color(0xFF313A44);
+  static const Color nearlyWhite = Color(0xFFEAFEEB); // a very light version of the green
+  static const Color white = Color(0xFFFFFFFF); // pure white, remains unchanged
+  static const Color background = Color(0xFF78E482);
 
-  static const Color darkText = Color(0xFF253840);
-  static const Color darkerText = Color(0xFF17262A);
-  static const Color lightText = Color(0xFF4A6572);
-  static const Color deactivatedText = Color(0xFF767676);
-  static const Color dismissibleBackground = Color(0xFF364A54);
-  static const Color spacer = Color(0xFFF2F2F2);
-  static const String fontName = 'Roboto';
+  // Darker and more saturated than baseColor
+  static const Color nearlyDarkBlue = Colors.black;
+
+  // These colors should be harmonious with the baseColor and adjusted accordingly
+  static const Color nearlyBlue = Colors.black;
+  static const Color nearlyBlack = Colors.black;// very dark desaturated green (could also be a true black or nearly black color)
+  static const Color grey = Colors.black; // greyish version of the green
+  static const Color dark_grey = Colors.black; // darker greyish version
+
+  // Text colors that are meant to be darker, possibly could stay relatively similar to ensure readability
+  static const Color darkText = Colors.black;
+  static const Color darkerText = Colors.black;
+  static const Color lightText = Colors.black;
+  static const Color deactivatedText = Colors.black; // could remain grey as it's often a system color
+
+  // Other UI elements
+  static const Color dismissibleBackground = Colors.black;
+  static const Color spacer = Color(0xFFF2F2F2); // this might remain very light as it's likely used for spaces in the UI
+
+  static const String fontName = 'Roboto'; // The font doesn't change
 
   static const TextTheme textTheme = TextTheme(
     headline4: display1,
