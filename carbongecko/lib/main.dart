@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:carbongecko/introduction_animation/introduction_animation_screen.dart';
 import 'package:carbongecko/dashboard/dashboard_home_screen.dart';
+import 'package:carbongecko/cloud_connector.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,8 +23,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         scaffoldBackgroundColor: geckoGreen,
       ),
-      home: const IntroductionAnimationScreen(),
-      // home: FitnessAppHomeScreen(),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('ElevatedButton Sample')),
+        body: ElevatedButton(
+          onPressed: () {
+            // CloudConnector().createObject();
+            print(CloudConnector().obtainToken());
+          },
+          child: const Text('Enabled'),
+        ),
+      ),
     );
   }
 }
