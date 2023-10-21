@@ -47,7 +47,7 @@ class WorkoutView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'Next workout',
+                        '',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontFamily: FitnessAppTheme.fontName,
@@ -60,7 +60,7 @@ class WorkoutView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: const Text(
-                          'Legs Toning and\nGlutes Workout at Home',
+                          'Welcome back,\nJohannes Tsouchlos',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontFamily: FitnessAppTheme.fontName,
@@ -83,7 +83,7 @@ class WorkoutView extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 4),
                               child: Icon(
-                                Icons.timer,
+                                Icons.privacy_tip,
                                 color: FitnessAppTheme.white,
                                 size: 16,
                               ),
@@ -91,7 +91,7 @@ class WorkoutView extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 4.0),
                               child: const Text(
-                                '68 min',
+                                'Your information is secure',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: FitnessAppTheme.fontName,
@@ -120,7 +120,7 @@ class WorkoutView extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.all(0.0),
                                 child: Icon(
-                                  Icons.arrow_right,
+                                  Icons.settings,
                                   color: HexColor("#6F56E8"),
                                   size: 44,
                                 ),

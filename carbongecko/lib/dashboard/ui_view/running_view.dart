@@ -54,7 +54,7 @@ class RunningView extends StatelessWidget {
                                   child: AspectRatio(
                                     aspectRatio: 1.714,
                                     child: Image.asset(
-                                        "assets/dashboard/back.png"),
+                                        "assets/dashboard/back_alt.png"),
                                   ),
                                 ),
                               ),
@@ -65,7 +65,7 @@ class RunningView extends StatelessWidget {
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                          left: 100,
+                                          left: 120,
                                           right: 16,
                                           top: 16,
                                         ),
@@ -87,18 +87,18 @@ class RunningView extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                      left: 100,
+                                      left: 120,
                                       bottom: 12,
                                       top: 4,
                                       right: 16,
                                     ),
                                     child: Text(
-                                      "Keep it up\nand stick to your plan!",
+                                      "You used 1h less social media than last week.\nKeep it up!\n",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontFamily: FitnessAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 10,
+                                        fontSize: 12,
                                         letterSpacing: 0.0,
                                         color: FitnessAppTheme.grey
                                             .withOpacity(0.5),
@@ -117,7 +117,7 @@ class RunningView extends StatelessWidget {
                         child: SizedBox(
                           width: 110,
                           height: 110,
-                          child: Image.asset("assets/dashboard/runner.png"),
+                          child: Image.asset("assets/geckoLogo.png"),
                         ),
                       )
                     ],
