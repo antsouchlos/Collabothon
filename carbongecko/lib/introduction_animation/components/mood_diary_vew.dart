@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MoodDiaryVew extends StatelessWidget {
   final AnimationController animationController;
@@ -81,7 +82,10 @@ class MoodDiaryVew extends StatelessWidget {
             children: [
               Text(
                 "Running on green servers",
-                style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                style: GoogleFonts.rowdies(
+                  fontSize: 26,
+                  color: Colors.black,
+                ),
               ),
               SlideTransition(
                 position: _moodFirstHalfAnimation,
@@ -93,8 +97,10 @@ class MoodDiaryVew extends StatelessWidget {
                     child: Text(
                       "By using low emission Google Cloud servers, the carbon emissions of this app are minimized.",
                       textAlign: TextAlign.center,
-                      style:
-                      TextStyle(fontSize: 20.0),
+                      style: GoogleFonts.poppins(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),

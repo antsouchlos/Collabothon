@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeView extends StatelessWidget {
   final AnimationController animationController;
@@ -74,7 +75,10 @@ class WelcomeView extends StatelessWidget {
                 position: _welcomeFirstHalfAnimation,
                 child: Text(
                   "Welcome",
-                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.rowdies(
+                    fontSize: 26,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               Padding(

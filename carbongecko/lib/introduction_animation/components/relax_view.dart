@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RelaxView extends StatelessWidget {
   final AnimationController animationController;
@@ -77,7 +78,10 @@ class RelaxView extends StatelessWidget {
                 position: _relaxAnimation,
                 child: Text(
                   "Help yourself!",
-                  style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.rowdies(
+                    fontSize: 26,
+                    color: Colors.black,
+                  ),
                 ),
               ),
               SlideTransition(
@@ -88,8 +92,10 @@ class RelaxView extends StatelessWidget {
                   child: Text(
                     "Less social media is not only good for you, but also for the environment!",
                     textAlign: TextAlign.center,
-                    style:
-                    TextStyle(fontSize: 20.0),
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
