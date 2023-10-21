@@ -107,8 +107,10 @@ class CareView extends StatelessWidget {
                 padding:
                     EdgeInsets.only(left: 64, right: 64, bottom: 16, top: 16),
                 child: Text(
-                  "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                  "Keep track & increase your personal carbon credits.",
                   textAlign: TextAlign.center,
+                  style:
+                  TextStyle(fontSize: 20.0),
                 ),
               ),
             ],

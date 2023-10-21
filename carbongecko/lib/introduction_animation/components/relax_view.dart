@@ -88,6 +88,8 @@ class RelaxView extends StatelessWidget {
                   child: Text(
                     "By improving your digital well-being and reducing your digital carbon footprint!",
                     textAlign: TextAlign.center,
+                    style:
+                    TextStyle(fontSize: 20.0),
                   ),
                 ),
               ),

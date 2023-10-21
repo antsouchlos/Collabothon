@@ -83,7 +83,7 @@ class WelcomeView extends StatelessWidget {
                   "We require an account to set you up.\nDon't worry, your information is\nsecure with us.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 20,
                   ),
                 ),
               )
