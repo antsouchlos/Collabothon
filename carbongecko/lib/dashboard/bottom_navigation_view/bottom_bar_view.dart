@@ -250,7 +250,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 8,
                       height: 8,
                       decoration: BoxDecoration(
-                        color: Color(0xFF78E482),
+                        color: Color(0xFF8DDD8D),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -271,7 +271,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 4,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: Color(0xFF78E482),
+                        color: Color(0xFF8DDD8D),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -292,7 +292,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 6,
                       height: 6,
                       decoration: BoxDecoration(
-                        color: Color(0xFF78E482),
+                        color: Color(0xFF8DDD8D),
                         shape: BoxShape.circle,
                       ),
                     ),

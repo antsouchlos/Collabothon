@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CareView extends StatelessWidget {
   final AnimationController animationController;
@@ -98,9 +99,11 @@ class CareView extends StatelessWidget {
                   position: _relaxSecondHalfAnimation,
                   child: Text(
                     "Carbon Credits",
-                    style:
-                        TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
-                  ),
+                    style: GoogleFonts.rowdies(
+                      fontSize: 26,
+                      color: Colors.black,
+                    ),
+                  )
                 ),
               ),
               Padding(
@@ -109,8 +112,10 @@ class CareView extends StatelessWidget {
                 child: Text(
                   "Keep track & increase your personal carbon credits.",
                   textAlign: TextAlign.center,
-                  style:
-                  TextStyle(fontSize: 20.0),
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ],

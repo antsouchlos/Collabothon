@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const Color geckoGreen = Color(0xFF78E482);
+    const Color geckoGreen = Color(0xFF8DDD8D);
 
     return MaterialApp(
       title: 'Carbon Gecko',
